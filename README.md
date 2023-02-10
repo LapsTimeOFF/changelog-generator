@@ -1,3 +1,2 @@
 
-# Typescript module
 # changelog-generator
