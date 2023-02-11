@@ -1,6 +1,7 @@
 import { spawn } from 'child_process';
 
-export const getCommitList = (callback: unknown) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const getCommitList = (callback: any) => {
   const gitLogs: string[] = [];
   const gitLog = spawn('git', ['log']);
 
@@ -49,6 +50,6 @@ export const getCommitList = (callback: unknown) => {
           };
       }
     }
-    console.log(commitArray);
+    callback(commitArray);
   });
 };
