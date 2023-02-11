@@ -1,14 +1,9 @@
-import { getCommitList } from '../src/index';
+import { generateChangelog } from '../src';
+import { version } from '../package.json';
 
-getCommitList(
-  (
-    list: {
-      id: string;
-      author: string;
-      message: string;
-      date: string;
-    }[]
-  ) => {
-    console.log(list);
-  }
+generateChangelog(
+  (changelog: string) => {
+    console.log(changelog);
+  },
+  version
 );
